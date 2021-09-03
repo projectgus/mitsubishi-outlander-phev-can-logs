@@ -13,11 +13,10 @@ def main(from_path, to_path):
             writer = csv.writer(to)
             writer.writerow(['Time Stamp','ID','Extended','Bus','LEN','D1','D2','D3','D4','D5','D6','D7','D8'])
             for line in fr:
-                m = re.match(r'Timestamp: *([\d\.]+) *ID: ([\da-f]+) *([S]) Rx *DLC: *(\d+) *([\da-f ]{23}) *Channel: (\d)', line)
+                m = re.match(r'Timestamp: *([\d\.]+) *ID: ([\da-f]+) *([S]) (Rx)? *DLC: *(\d+) *([\da-f ]{23}) *Channel: (\d)', line)
                 if m:
-                    timestamp, canid, idtype, dlc, data, channel = m.groups()
-                    # currently canalystii python-can returns units of 100us
-                    timestamp = int(float(timestamp)) * 100
+                    timestamp, canid, idtype, _, dlc, data, channel = m.groups()
+                    timestamp = int(float(timestamp) * 1e6)  # to microseconds
                     dbytes = data.upper().split(" ")
                     assert len(dbytes) == 8
                     extended = idtype != 'S'  # bit hacky

@@ -32,7 +32,7 @@ Might be the heater control message (maybe, this car doesn't have an electric he
 
 Looks like a sensor reading, maybe related to power usage??
 
-### 0x388 - looks like AC compressor control signal (or could be status?)
+### 0x388 - looks like AC compressor status
 
 * byte 0 - seen to be 01 -> 81 after compressor starts -> 82 after compressor stops (?)
 * byte 1 - 00 most of the time, goes 00 -> 02 when first byte goes 81 -> 82 after compressor stops
@@ -152,6 +152,21 @@ Current draw timestamps (BMU message 0x3C2) on Channel 1 match the video and the
 * on again 308.5, off 324.2,
 * on 344, off 355.2,
 * on 373.9, off 383.54
+
+## 202109031705-enable-ac-no-refrigerant
+
+Running the air conditioner in EV mode, after refrigerant has been removed from the system.
+
+* TS 646 is 0:00
+* TS 666 power on 0:19
+* TS 676 enter EV mode 0:29
+* TS 686 turn on AC (Climate set to 25C, start turning it down) 0:39
+* TS 671 climate down to 18C minimum 0:44
+* TS 674 fan up to middle setting 0:47
+* TS 697 AC turned off 1:10
+* TS 699 Fan turn off 1:12
+
+Battery current draw shows nothing significant after TS 669, so unlikely the compressor is even starting. The AC controller may have detected very low pressure and decided not to engage it.
 
 ## 202108081224-heater-attempt-ev-mode
 
