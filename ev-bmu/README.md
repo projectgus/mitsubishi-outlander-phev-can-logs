@@ -22,7 +22,7 @@ Most messages on this bus are documented in SimpBMS by @Tom-evnut: https://githu
 
 ### 0x185 - something to do with heating or AC compressor?
 
-Seems like it might correlate with both AC compressor and heater on/off...?
+Control message for AC compressor. [Discussion thread](https://openinverter.org/forum/viewtopic.php?f=19&t=1997&p=32901).
 
 ### 0x188
 
@@ -33,6 +33,8 @@ Might be the heater control message (maybe, this car doesn't have an electric he
 Looks like a sensor reading, maybe related to power usage??
 
 ### 0x388 - looks like AC compressor status
+
+([Better analysis than this can be found here](https://openinverter.org/forum/viewtopic.php?f=19&t=1997&p=32901).
 
 * byte 0 - seen to be 01 -> 81 after compressor starts -> 82 after compressor stops (?)
 * byte 1 - 00 most of the time, goes 00 -> 02 when first byte goes 81 -> 82 after compressor stops
