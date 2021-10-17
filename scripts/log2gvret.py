@@ -17,8 +17,7 @@ def main(from_path, to_path):
                 if m:
                     timestamp, canid, idtype, _, dlc, data, channel = m.groups()
                     timestamp = int(float(timestamp) * 1e6)  # to microseconds
-                    dbytes = data.upper().split(" ")
-                    assert len(dbytes) == 8
+                    dbytes = [d for d in data.upper().split(" ") if d]
                     extended = idtype != 'S'  # bit hacky
                     canid = int(canid, 16)
 
@@ -30,7 +29,10 @@ def main(from_path, to_path):
 
 
 if __name__ == "__main__":
+    inpath = sys.argv[1]
     try:
-        main(sys.argv[1], sys.argv[2])
+        outpath = sys.argv[2]
     except IndexError:
-        main(sys.argv[1], os.path.splitext(sys.argv[1])[0] + '.csv')
+        outpath = os.path.splitext(sys.argv[1])[0] + '.csv'
+    main(inpath, outpath)
+
