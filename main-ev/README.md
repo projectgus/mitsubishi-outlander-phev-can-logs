@@ -18,6 +18,25 @@ Turning car to ready, turning steering wheel back and forth
 * TS 270 Hard lock to the left, start turning back 0:35
 * TS 275 Back to centre, I think 0:40
 
+## 202109061517-parking-brake
+
+Car is already in Ready when this capture starts, parking brake on.
+
+* TS 356 corresponds to 0:00
+* TS 370 Parking brake off 0:14
+* TS 371 Parking brake on 0:15
+* TS 373 Parking brake off 0:17
+* TS 375 Parking brake on 0:19
+* TS 377 Parking brake off 0:21
+* TS 379 Parking brake on 0:23
+* TS 381 Parking brake off 0:25
+* TS 383 Parking brake on 0:27
+* TS 385 Parking brake off 0:29
+* TS 388 Parking brake on 0:32
+* TS 390 Parking brake off 0:34
+* TS 392 Parking brake on 0:36
+
+
 ## 202109091700-ac-on-no-refrigerant
 
 Turning on the AC after the system has been degassed. There is a capture of the AC properly running in the ev-bmu directory.
