@@ -1,0 +1,12 @@
+86-126 SPI flash/EEPROM: Commands: Command: Write enable (WREN)
+331-747 SPI flash/EEPROM: Commands: Page program (addr 0x000203, 6 bytes): fd fc fe fd db 0a
+48241-48321 SPI flash/EEPROM: Commands: Command: Read status register (RDSR)
+48576-49002 SPI flash/EEPROM: Commands: Read data (addr 0x000000, 6 bytes): fd fc fe fd db 0a
+1130238-1130469 SPI flash/EEPROM: Commands: Read data (addr 0xcd0000, 1 bytes): 00
+1215000-1215425 SPI flash/EEPROM: Commands: Read data (addr 0x000000, 6 bytes): fd fc fe fd db 0a
+1266211-1266636 SPI flash/EEPROM: Commands: Read data (addr 0x080000, 6 bytes): f7 fa f8 fb dc 23
+1316252-1320874 SPI flash/EEPROM: Commands: Read data (addr 0x100000, 108 bytes): 00 10 27 00 0f 27 00 0d 27 00 0f 27 00 0d 27 00 11 27 00 0e 27 00 09 27 1e 10 27 00 10 27 00 10 27 00 0e d9 ff ef d8 ff f0 d8 ff f2 d8 ff f0 d8 ff f2 d8 ff ee d8 ff f1 d8 ff f6 d8 e1 ef d8 ff ef d8 ff ef d8 ff 0f da 00 f0 d9 00 f1 d9 00 f3 d9 00 f1 d9 00 f3 d9 00 ef d9 00 f2 d9 00 f7 d9 e2 f0 d9 00 f0 d9 00 f0 d9 00 7a 0f
+1371829-1372466 SPI flash/EEPROM: Commands: Read data (addr 0x900000, 11 bytes): 00 00 00 00 00 00 20 00 00 3b 03
+1416521-1417114 SPI flash/EEPROM: Commands: Read data (addr 0x840000, 10 bytes): 39 39 42 35 34 30 20 20 da 98
+1466207-1466599 SPI flash/EEPROM: Commands: Read data (addr 0xb70000, 5 bytes): 06 29 bb e7 98
+1515975-1516249 SPI flash/EEPROM: Commands: Read data (addr 0xb30000, 2 bytes): 00 00
